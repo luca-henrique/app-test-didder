@@ -1,0 +1,12 @@
+{
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint":"always" 
+  },
+  "css.validate": false,
+  "scss.validate": false,
+  "stylelint.enable": true,
+  "stylelint.ignoreDisables": true,
+  "stylelint.validate": ["css", "scss", "postcss"],
+  "stylelint.snippet": ["css", "scss", "postcss"],
+}

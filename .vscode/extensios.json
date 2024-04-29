@@ -1,0 +1,16 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "ambar.bundle-size",
+    "naumovs.color-highlight",
+    "usernamehw.errorlens",
+    "styled-components.vscode-styled-components",
+    "SonarSource.sonarlint-vscode",
+    "syler.sass-indented",
+    "mrmlnc.vscode-scss",
+    "EditorConfig.EditorConfig",
+    "esbenp.prettier-vscode",
+    "stylelint.vscode-stylelint",
+    "webhint.vscode-webhint"
+  ]
+}

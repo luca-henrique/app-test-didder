@@ -1,0 +1,50 @@
+{
+  "root": true,
+  "extends": [
+    "universe/native",
+    "universe/shared/typescript-analysis",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:prettier/recommended",
+    "prettier"
+  ],
+  "rules": {
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/react-in-jsx-scope": "off",
+    "prettier/prettier": "error",
+    "import-helpers/order-imports": [
+        "warn",
+        {
+            "newlinesBetween": "always", // new line between groups
+            "groups": [
+                ["/^@react/","/^react-native/"],
+                "/components/",
+                "/absolute/",
+                [
+                    "parent",
+                    "sibling",
+                    "index"
+                ]
+            ],
+            "alphabetize": {
+                "order": "asc",
+                "ignoreCase": true
+            }
+        }
+    ]
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+      "ecmaVersion": "latest",
+      "sourceType": "module"
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "react",
+    "eslint-plugin-import-helpers",
+    "react-hooks"
+  ]
+}
