@@ -1,3 +1,4 @@
+import { ApolloClient, ApolloLink, ApolloProvider, InMemoryCache } from '@apollo/client';
 import React, { createContext, ReactNode, useState } from 'react';
 
 export interface AuthContextType {
@@ -13,5 +14,22 @@ interface AuthProviderProps {
 
 export const AuthProvider = ({ children }: AuthProviderProps) => {
 	const [token, setToken] = useState<string>('');
-	return <AuthContext.Provider value={{ token, setToken }}>{children}</AuthContext.Provider>;
+	
+
+
+	const client = new ApolloClient({
+		uri: 'https://api.heitorurbanetz.com.br',
+		cache: new InMemoryCache(),
+    headers: {
+      authorization: token ? `Bearer ${token}` : "",
+    }
+	});
+
+	
+
+	return (
+		<AuthContext.Provider value={{ token, setToken }}>
+			<ApolloProvider client={client}>{children}</ApolloProvider>
+		</AuthContext.Provider>
+	);
 };
