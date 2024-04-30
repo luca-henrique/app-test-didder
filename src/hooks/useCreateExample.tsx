@@ -8,7 +8,7 @@ export const useCreateObject = () => {
 		variables: {
 			typeText: 'testedidder',
 			typeBoolean: true,
-      typeDatetime: "01/01/2000",
+      typeDatetime: new Date(),
       typeEnum:"exampleOne",
       exampleOtherOneId:1,
       exampleOtherTwoId:1,
