@@ -4,12 +4,13 @@ import { SignInScreen } from '../screens/SignInScreen/SignInScreen';
 import { HomeScreen } from '../screens/HomeScreen/HomeScreen';
 import { useContext, useEffect } from 'react';
 import { AuthContext, AuthContextType } from '../contexts/AuthContext';
+import { SignUpScreen } from '../screens/SignUpScreen/SignUpScreen';
 
 const Stack = createNativeStackNavigator();
 
 export const StackNavigator = () => {
 	const { token } = useContext(AuthContext) as AuthContextType;
-	const { navigate } = useNavigation();
+	const { navigate } = useNavigation<any>();
 
 	useEffect(() => {
 		if (token) {
@@ -25,6 +26,7 @@ export const StackNavigator = () => {
 			}}
 		>
 			<Stack.Screen name="SignIn" component={SignInScreen} />
+			<Stack.Screen name="SignUp" component={SignUpScreen} />
 			<Stack.Screen name="Home" component={HomeScreen} />
 		</Stack.Navigator>
 	);
