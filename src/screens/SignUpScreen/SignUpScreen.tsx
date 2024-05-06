@@ -10,8 +10,6 @@ export const SignUpScreen = () => {
 
 	const { asyncCreateObject } = useCreateObject();
 
-	
-
   return (
     <View style={{ width: '100%', padding: 20, gap: 12, flex:1, justifyContent:"center" }}>      
 		<Input control={control} name="typeText" />
